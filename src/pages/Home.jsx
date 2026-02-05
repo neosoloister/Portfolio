@@ -215,7 +215,7 @@ const Home = () => {
                     <a data-aos="fade-up" href="mailto:thalebanthaokloy.sea@gmail.com" className="btn btn-primary" style={{ fontSize: '1.2rem', padding: '1rem 2rem' }}>ทักทายเลย</a>
 
                     <div className="contact-icons">
-                        <a href="https://facebook.com/thalebanthaokloy" target="_blank" rel="noopener noreferrer">
+                        <a href="https://facebook.com/thaleban.thaokloy.2025" target="_blank" rel="noopener noreferrer">
                             <Facebook color="var(--text-secondary)" className="icon-hover" style={{ cursor: 'pointer' }} />
                         </a>
                         <a href="https://instagram.com/_banx4byte_" target="_blank" rel="noopener noreferrer">
