@@ -19,14 +19,14 @@ const Home = () => {
 
             {/* Hero Section */}
             <Element name="home">
-                <div className="section" style={{ minHeight: '100vh', display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center', position: 'relative' }}>
+                <div className="section" style={{ alignItems: 'center', position: 'relative' }}>
                     {/* Background Glow */}
                     <div style={{ position: 'absolute', top: '20%', left: '20%', width: '300px', height: '300px', background: 'var(--accent-cyan)', filter: 'blur(150px)', opacity: 0.2, borderRadius: '50%' }}></div>
                     <div style={{ position: 'absolute', bottom: '20%', right: '20%', width: '300px', height: '300px', background: 'var(--accent-blue)', filter: 'blur(150px)', opacity: 0.2, borderRadius: '50%' }}></div>
 
                     <div className="container" style={{ zIndex: 1, textAlign: 'center', width: '100%' }}>
-                        <h2 data-aos="fade-up" style={{ fontSize: '1.5rem', color: 'var(--accent-cyan)', marginBottom: '1rem', textAlign: 'center' }}>Hi, I'm Thaleban Thaokloy</h2>
-                        <h1 data-aos="fade-up" data-aos-delay="100" style={{ fontSize: '4rem', marginBottom: '1rem' }}>
+                        <h2 className="hero-subtitle" data-aos="fade-up">Hi, I'm Thaleban Thaokloy</h2>
+                        <h1 className="hero-title" data-aos="fade-up" data-aos-delay="100">
                             I Build <span className="gradient-text">
                                 <Typewriter
                                     words={['Hobby Operating System.', 'System Tools.', 'Web Application.']}
@@ -39,7 +39,7 @@ const Home = () => {
                                 />
                             </span>
                         </h1>
-                        <p data-aos="fade-up" data-aos-delay="200" style={{ fontSize: '1.2rem', color: 'var(--text-secondary)', maxWidth: '600px', margin: '0 auto 2rem' }}>
+                        <p className="hero-desc" data-aos="fade-up" data-aos-delay="200">
                             แฟ้มสะสมผลงานสำหรับการสมัครเข้าศึกษาต่อ KMUTT.<br />มีความชอบใน Low-level programming และ Operating System
                         </p>
                         <div data-aos="fade-up" data-aos-delay="300" style={{ display: 'flex', justifyContent: 'center', marginBottom: '2rem' }}>
@@ -53,8 +53,8 @@ const Home = () => {
             <Element name="about">
                 <div className="section container">
                     <h2 data-aos="fade-up"><span style={{ color: 'var(--accent-cyan)' }}>01.</span> About Me</h2>
-                    <div className="glass-card" data-aos="fade-up" style={{ display: 'flex', gap: '2rem', flexWrap: 'wrap', alignItems: 'stretch' }}>
-                        <div style={{ flex: 1, minWidth: '400px' }}>
+                    <div className="glass-card about-container" data-aos="fade-up">
+                        <div className="about-text">
                             <p style={{ marginBottom: '1rem', color: 'var(--text-secondary)' }}>
                                 ผมเติบโตมาในสภาพแวดล้อมของร้านเกมซึ่งทำให้ผมคุ้นเคยกับคอมพิวเตอร์มาตั้งแต่เด็ก จากจุดเริ่มต้นที่เล่นเกมเพื่อความสนุก ผมเริ่มขยับมาลง Mod เกม Minecraft ซึ่งเป็นก้าวแรกที่ทำให้ผมเข้าใจพื้นฐานการทำงานของระบบไฟล์ในคอมพิวเตอร์ จนเมื่อขึ้นชั้น ม.1 ผมได้เข้าค่ายเขียนโปรแกรม เริ่มเรียนรู้การออกแบบ Flowchart และฝึกเขียนภาษา Python เป็นภาษาแรก ความหลงใหลในโลกของการเขียนโปรแกรมทำให้ผมต่อยอดความรู้มาสร้าง Discord Bot ของตัวเองได้สำเร็จ
                             </p>
@@ -76,8 +76,8 @@ const Home = () => {
                                 ))}
                             </ul>
                         </div>
-                        <div style={{ flex: 1, minWidth: '300px', display: 'flex', justifyContent: 'center', alignItems: 'center' }}>
-                            <div style={{ position: 'relative', width: '300px', height: '300px' }}>
+                        <div className="about-image-wrapper">
+                            <div className="about-image-box">
                                 <div style={{ position: 'absolute', inset: 0, border: '2px solid var(--accent-cyan)', borderRadius: '16px', transform: 'translate(20px, 20px)', transition: 'transform 0.3s ease' }}></div>
                                 <div style={{ position: 'absolute', inset: 0, background: '#333', borderRadius: '16px', display: 'flex', alignItems: 'center', justifyContent: 'center', color: '#555', overflow: 'hidden' }}>
                                     <img src="/assets/profile.jpg" alt="Thaleban Thaokloy" style={{ width: '100%', height: '100%', objectFit: 'cover', objectPosition: 'top' }} />
@@ -121,7 +121,7 @@ const Home = () => {
             <Element name="projects">
                 <div className="section container">
                     <h2 data-aos="fade-up"><span style={{ color: 'var(--accent-cyan)' }}>03.</span> Projects</h2>
-                    <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))', gap: '2rem' }}>
+                    <div className="projects-grid">
                         {[
                             {
                                 name: 'Thaleban-Operating-System',
@@ -214,7 +214,7 @@ const Home = () => {
                     </p>
                     <a data-aos="fade-up" href="mailto:thalebanthaokloy.sea@gmail.com" className="btn btn-primary" style={{ fontSize: '1.2rem', padding: '1rem 2rem' }}>ทักทายเลย</a>
 
-                    <div style={{ marginTop: '5rem', display: 'flex', justifyContent: 'center', gap: '2rem' }}>
+                    <div className="contact-icons">
                         <a href="https://facebook.com/thalebanthaokloy" target="_blank" rel="noopener noreferrer">
                             <Facebook color="var(--text-secondary)" className="icon-hover" style={{ cursor: 'pointer' }} />
                         </a>

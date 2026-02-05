@@ -48,7 +48,7 @@ const Navbar = () => {
                 </div>
 
                 {/* Desktop Menu */}
-                <div className="desktop-menu" style={{ display: window.innerWidth > 768 ? 'flex' : 'none', gap: '2rem' }}>
+                <div className="desktop-menu">
                     {navLinks.map((link) => (
                         <Link
                             key={link.to}
@@ -73,28 +73,14 @@ const Navbar = () => {
                 </div>
 
                 {/* Mobile Toggle */}
-                <div className="mobile-toggle" style={{ display: window.innerWidth > 768 ? 'none' : 'block', cursor: 'pointer' }} onClick={() => setIsOpen(!isOpen)}>
+                <div className="mobile-toggle" onClick={() => setIsOpen(!isOpen)}>
                     {isOpen ? <X color="#fff" /> : <Menu color="#fff" />}
                 </div>
             </div>
 
             {/* Mobile Menu */}
             {isOpen && (
-                <div
-                    style={{
-                        position: 'absolute',
-                        top: '100%',
-                        left: 0,
-                        width: '100%',
-                        background: 'rgba(10, 10, 10, 0.95)',
-                        backdropFilter: 'blur(10px)',
-                        padding: '2rem',
-                        display: 'flex',
-                        flexDirection: 'column',
-                        gap: '1.5rem',
-                        borderBottom: '1px solid rgba(255, 255, 255, 0.1)',
-                    }}
-                >
+                <div className="mobile-menu-overlay">
                     {navLinks.map((link) => (
                         <Link
                             key={link.to}

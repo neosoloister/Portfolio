@@ -133,3 +133,166 @@ h2 {
 }
 
 /* Animations using AOS generally, but custom ones here if needed */
+
+/* Responsive & Utilities Refactor */
+
+/* Navbar Control */
+.desktop-menu {
+  display: flex !important;
+  gap: 2rem;
+}
+
+.mobile-toggle {
+  display: none !important;
+  cursor: pointer;
+}
+
+.mobile-menu-overlay {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 100%;
+  background: rgba(10, 10, 10, 0.95);
+  backdrop-filter: blur(10px);
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.5);
+}
+
+/* Home Page Utilities */
+.hero-title {
+  font-size: 4rem;
+  margin-bottom: 1rem;
+  line-height: 1.1;
+}
+
+.hero-subtitle {
+  font-size: 1.5rem;
+  color: var(--accent-cyan);
+  margin-bottom: 1rem;
+  text-align: center;
+}
+
+.hero-desc {
+  font-size: 1.2rem;
+  color: var(--text-secondary);
+  max-width: 600px;
+  margin: 0 auto 2rem;
+}
+
+.about-container {
+  display: flex;
+  gap: 2rem;
+  flex-wrap: wrap;
+  align-items: stretch;
+}
+
+.about-text {
+  flex: 1;
+  min-width: 300px;
+}
+
+.about-image-wrapper {
+  flex: 1;
+  min-width: 300px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.about-image-box {
+  position: relative;
+  width: 300px;
+  height: 300px;
+}
+
+.projects-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+}
+
+.contact-icons {
+  margin-top: 5rem;
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+}
+
+/* Media Query for Mobile/Tablet */
+@media (max-width: 768px) {
+  .section {
+    padding: 4rem 0;
+    /* Reduce padding on mobile */
+  }
+
+  .container {
+    padding: 0 1rem;
+    /* Smaller horizontal padding */
+  }
+
+  /* Navbar */
+  .desktop-menu {
+    display: none !important;
+  }
+
+  .mobile-toggle {
+    display: block !important;
+  }
+
+  /* Hero */
+  .hero-title {
+    font-size: 2.5rem;
+    /* Smaller title */
+  }
+
+  .hero-subtitle {
+    font-size: 1.2rem;
+  }
+
+  .hero-desc {
+    font-size: 1rem;
+    padding: 0 1rem;
+  }
+
+  /* About */
+  .about-container {
+    flex-direction: column-reverse;
+    /* Stack image on top (or bottom depending on pref), here I'll keep text then image or default wrapping. Let's stick to default wrap but ensure widths */
+    gap: 3rem;
+  }
+
+  .about-text,
+  .about-image-wrapper {
+    min-width: 100%;
+    /* Full width on mobile */
+  }
+
+  .about-image-box {
+    width: 250px;
+    height: 250px;
+    /* Slightly smaller image on mobile */
+  }
+
+  /* Journey */
+  .journey-item {
+    /* Add if needed */
+  }
+
+  /* Projects */
+  .projects-grid {
+    grid-template-columns: 1fr;
+    /* Single column on mobile */
+    gap: 1.5rem;
+  }
+
+  /* Contact */
+  .contact-icons {
+    margin-top: 3rem;
+    gap: 1.5rem;
+    flex-wrap: wrap;
+  }
+}
