@@ -6,7 +6,7 @@
   --accent-blue: #0078ff;
   --glass-bg: rgba(255, 255, 255, 0.05);
   --glass-border: rgba(255, 255, 255, 0.1);
-  --font-main: 'Outfit', sans-serif;
+  --font-main: 'Kanit', 'Outfit', sans-serif;
   --font-mono: monospace;
 }
 
@@ -119,7 +119,9 @@ body {
   background: rgba(255, 255, 255, 0.05);
 }
 
-h1, h2, h3 {
+h1,
+h2,
+h3 {
   font-weight: 700;
   line-height: 1.2;
 }

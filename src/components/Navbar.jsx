@@ -20,11 +20,11 @@ const Navbar = () => {
     }, []);
 
     const navLinks = [
-        { name: 'Home', to: 'home' },
-        { name: 'About', to: 'about' },
-        { name: 'Journey', to: 'journey' },
-        { name: 'Projects', to: 'projects' },
-        { name: 'Contact', to: 'contact' },
+        { name: 'หน้าแรก', to: 'home' },
+        { name: 'เกี่ยวกับฉัน', to: 'about' },
+        { name: 'ประสบการณ์', to: 'journey' },
+        { name: 'ผลงาน', to: 'projects' },
+        { name: 'ติดต่อ', to: 'contact' },
     ];
 
     return (
@@ -44,7 +44,7 @@ const Navbar = () => {
         >
             <div className="container" style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
                 <div style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', fontSize: '1.5rem', fontWeight: 'bold', color: 'var(--accent-cyan)' }}>
-                    <Code /> <span>Neo<span style={{ color: '#fff' }}>Soloister</span></span>
+                    <Code /> <span>Thaleban <span style={{ color: '#fff' }}>Thaokloy</span></span>
                 </div>
 
                 {/* Desktop Menu */}
